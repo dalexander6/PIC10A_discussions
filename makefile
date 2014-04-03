@@ -17,7 +17,7 @@ OBJECTS = $(SOURCES:.cpp=.o)
 CC = g++
 CFLAGS  = -g -Wall
 CFLAGS += -std=c++0x
-MAINS = main.cpp
+MAINS =  april_3.cpp
 TESTS = 
 EXECUTABLES = $(MAINS:.cpp=.exe)
 EXECUTABLES += $(TESTS:.cpp=.exe)
@@ -31,13 +31,8 @@ vpath %.cpp test/
 .SUFFIXES: 
 .SUFFIXES: .cpp .exe .o .h
 
-all : PHONY $(EXECUTABLES) $(OBJECTS) $(SOURCES) $(HEADERS)
+all : PHONY $(EXECUTABLES) $(OBJECTS) $(SOURCES)
 	@printf -- "--------------MAKE COMPLETED--------------\n\n"
-
-main.exe : main.cpp $(OBJECTS) log.h
-	@echo "----------Making $@ from $< (from main.exe)--------------------"
-	$(CC) $(CFLAGS) $(INCLUDES) $(OBJECTS) $< -o $@
-	@echo "-------------Done----------------------------------------"
 
 %.exe : %.cpp
 	@echo "----------Making $@ from $< (from .cpp.exe)--------------------"	
@@ -48,6 +43,7 @@ main.exe : main.cpp $(OBJECTS) log.h
 	@echo "----------Making $@ from $< (from .cpp.o)--------------------"	
 	$(CC) -c $(CFLAGS) $(INCLUDES) $<
 	@echo "-------------Done----------------------------------------"
+
 
 #Intro message
 PHONY: 
