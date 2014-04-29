@@ -17,7 +17,8 @@ OBJECTS = $(SOURCES:.cpp=.o)
 CC = g++
 CFLAGS  = -g -Wall
 CFLAGS += -std=c++0x
-MAINS =  april_3.cpp april_8_tues.cpp
+MAINS =  
+MAINS +=  april_29_tues.cpp
 TESTS = 
 EXECUTABLES = $(MAINS:.cpp=.exe)
 EXECUTABLES += $(TESTS:.cpp=.exe)
