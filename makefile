@@ -8,7 +8,7 @@
 #  -Wall turns on most, but not all, compiler warnings
 #
 SHELL := /bin/bash
-#MAIN_FILES := $(patsubst %.cpp, %.exe,$(wildcard *.cpp))
+MAIN_FILES := $(patsubst %.cpp, %.exe,$(wildcard *.cpp))
 SOURCES += 
 HEADERS = $(SOURCES:.cpp=.h)
 HEADERS += log.h
@@ -18,7 +18,7 @@ CC = g++
 CFLAGS  = -g -Wall
 CFLAGS += -std=c++0x
 MAINS =  
-MAINS +=  april_29_tues.cpp
+#MAINS +=  april_29_tues.cpp
 TESTS = 
 EXECUTABLES = $(MAINS:.cpp=.exe)
 EXECUTABLES += $(TESTS:.cpp=.exe)
@@ -32,7 +32,7 @@ vpath %.cpp test/
 .SUFFIXES: 
 .SUFFIXES: .cpp .exe .o .h
 
-all : PHONY $(EXECUTABLES) $(OBJECTS) $(SOURCES)
+all : PHONY $(EXECUTABLES) $(OBJECTS) $(SOURCES) $(MAIN_FILES)
 	@printf -- "--------------MAKE COMPLETED--------------\n\n"
 
 %.exe : %.cpp

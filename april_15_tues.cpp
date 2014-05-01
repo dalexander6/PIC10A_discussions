@@ -43,7 +43,7 @@ int main() {
 	vector<double> v = {1/3, 1/3., 4/2*2, (2+4) % 2 , 2 == 1, 2 == 2};
 	int x = 2;
 	int y = x = 3;
-	if (3 = x) {
+	if (3 == x) {
 		cout << "x = 3" << endl;
 	}
 	for (auto i : v) {
