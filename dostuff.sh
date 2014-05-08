@@ -3,6 +3,6 @@
 
 printf -- "\n\n*************dostuff .sh*************\n"
 
-./may_6_tues.exe
+./may_8_thurs.exe
 printf "*************dostuff.sh COMPLETED******\n\n"
 exit 0

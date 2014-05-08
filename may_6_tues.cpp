@@ -46,6 +46,7 @@ void annoyingTestProblem(int a, int& b) {
 	b++;
 }
 
+/*
 class foo {
 private:
 	int f1;
@@ -53,13 +54,14 @@ private:
 	double f3;
 	Shift f4;
 public:
-	foo(int f1, string _f2, double _f3, Shift _f4) {
+	foo(int f1, string _f2, double _f3, Shift _f4) : Shift(f4) {
 		this->f1 = f1;
 		f2 = _f2;
 		f3 = _f3;
 		f4 = _f4;
 	}
 };
+*/
 
 int main(){
 	Shift myShift("Damon", 1300, 1350);
