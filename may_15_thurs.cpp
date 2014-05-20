@@ -5,7 +5,6 @@ version: 11/13/2012
 This example defines a Truck class and uses Hortsmann's graphics library to draw a 
 truck moving across the window.
 
-*/
 #include "../cccfiles/ccc_win.h"
 #include "../cccfiles/ccc_animate.h"
 
@@ -17,10 +16,8 @@ class Truck {
     Truck(const Point& location, unsigned int size);
 	Truck();
 
-	/** Draws the Truck on the window. */
     void draw() const;
 
-    /** Move the truck to the given location. */
 	void move(const Point& location);
 
   private:
@@ -160,16 +157,11 @@ void House::drawFrame() const {
 	Line top(upperLeft, upperRight);
 	Line bottom(lowerLeft, lowerRight);
 	cwin << left << right << top << bottom;
-	/* or like so:
-	cwin << Line(lowerLeft, upperLeft); //draw the left
-	*/
+	//cwin << Line(lowerLeft, upperLeft); //draw the left
 }
 
 void House::drawChimney() const {
 }
-/* 
-  main for the window graphics application
-*/
 int ccc_win_main() {
 
   
@@ -211,3 +203,6 @@ int ccc_win_main() {
    cwin << Message(Point((XMIN + XMAX)/2, (YMIN + YMAX)/2), "THE END");
    return 0;
 };
+*/
+int main() {
+}
